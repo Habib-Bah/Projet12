@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Inscription</title>
+	<link rel="stylesheet" href="styleConnexion.css">
+</head>
+
+<body>
+
+	<form th:action="@{saveClient}" method="POST">
+
+		<div class="login-box">
+			<h1>Inscription</h1>
+			<div class="textbox">
+				<i class="fas fa-user"></i>
+				<input type="text" placeholder="Username" name="nom" th:value="${client.nom}">
+			</div>
+
+			<div class="textbox">
+				<i class="fas fa-lock"></i>
+				<input type="password" placeholder="Password" name="motdepasse" th:value="${client.motdepasse}">
+			</div>
+
+			<div class="textbox">
+				<i class="fas fa-envelope-square"></i>
+				<input type="text" placeholder="Email" name="email" th:value="${client.email}">
+			</div>
+
+			<div class="textbox">
+				<i class="fas fa-map-marked-alt"></i>
+				<input type="text" placeholder="Adress" name="adresse" th:value="${client.email}">
+			</div>
+
+			<input type="submit" class="btn" value="Sign in">
+		</div>
+
+	</form>
+</body>
+
+</html>
