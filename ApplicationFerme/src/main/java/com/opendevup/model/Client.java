@@ -14,96 +14,96 @@ import javax.validation.constraints.NotNull;
 @Table(name = "utilisateur", schema = "public")
 public class Client implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	@Column(name = "nom")
-	@NotNull
-	private String nom;
+    @Column(name = "nom")
+    @NotNull
+    private String nom;
 
-	@Column(name = "email")
-	@NotNull
-	private String email;
+    @Column(name = "email")
+    @NotNull
+    private String email;
 
-	@Column(name = "motdepasse")
-	@NotNull
-	private String motdepasse;
-	
-	@Column(name = "adresse")
-	@NotNull
-	private String adresse;
-	
-	
-	private String role;
-	
-	
-	public Client() {
-		super();
-		
-		this.role = "USER";
+    @Column(name = "motdepasse")
+    @NotNull
+    private String motdepasse;
 
-	}
+    @Column(name = "adresse")
+    @NotNull
+    private String adresse;
 
-	public Client(String nom, String email, String motdepasse, String adresse) {
-		super();
-		this.nom = nom;
-		this.email = email;
-		this.motdepasse = motdepasse;
-		this.adresse = adresse;
-		this.role = "USER";
 
-	}
+    private String role;
 
-	public long getId() {
-		return id;
-	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public Client() {
+        super();
 
-	public String getNom() {
-		return nom;
-	}
+        this.role = "USER";
 
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public Client(String nom, String email, String motdepasse, String adresse) {
+        super();
+        this.nom = nom;
+        this.email = email;
+        this.motdepasse = motdepasse;
+        this.adresse = adresse;
+        this.role = "USER";
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    }
 
-	public String getMotdepasse() {
-		return motdepasse;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setMotdepasse(String motdepasse) {
-		this.motdepasse = motdepasse;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public String getAdresse() {
-		return adresse;
-	}
+    public String getNom() {
+        return nom;
+    }
 
-	public void setAdresse(String adresse) {
-		this.adresse = adresse;
-	}
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
-	public String getRole() {
-		return role;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setRole(String role) {
-		this.role = role;
-	}
-	
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMotdepasse() {
+        return motdepasse;
+    }
+
+    public void setMotdepasse(String motdepasse) {
+        this.motdepasse = motdepasse;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
 
 }

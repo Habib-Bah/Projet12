@@ -14,71 +14,70 @@ import javax.validation.constraints.NotNull;
 @Table(name = "visite", schema = "public")
 public class Visite implements Serializable {
 
-	
-	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+    private static final long serialVersionUID = 1L;
 
-	@Column(name = "nom")
-	@NotNull
-	private String nom;
-	
-	@Column(name = "code")
-	@NotNull
-	private String code;
-	
-	@Column(name = "date")
-	@NotNull
-	private String date;
-	
-	
-	public Visite() {
-		super();
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	}
+    @Column(name = "nom")
+    @NotNull
+    private String nom;
 
-	public Visite(String nom, String code, String date) {
-		super();
-		this.nom = nom;
-		this.code = code;
-		this.date = date;
-		
-	}
+    @Column(name = "code")
+    @NotNull
+    private String code;
 
-	public long getId() {
-		return id;
-	}
+    @Column(name = "date")
+    @NotNull
+    private String date;
 
-	public void setId(long id) {
-		this.id = id;
-	}
 
-	public String getNom() {
-		return nom;
-	}
+    public Visite() {
+        super();
 
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
+    }
 
-	public String getCode() {
-		return code;
-	}
+    public Visite(String nom, String code, String date) {
+        super();
+        this.nom = nom;
+        this.code = code;
+        this.date = date;
 
-	public void setCode(String code) {
-		this.code = code;
-	}
+    }
 
-	public String getDate() {
-		return date;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setDate(String date) {
-		this.date = date;
-	}
-	
-	
-	
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+
 }

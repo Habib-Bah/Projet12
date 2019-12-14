@@ -12,10 +12,10 @@ import com.opendevup.repository.ClientRepository;
 
 @Controller
 public class ClientController {
-	
-	
-	@Autowired
-	ClientRepository clientRepository;
+
+
+    @Autowired
+    ClientRepository clientRepository;
 /*
 	@RequestMapping(value = "/")
 	public String acceuil(Model model) {
@@ -23,53 +23,53 @@ public class ClientController {
 		return "redirect:/index";
 	}
 	*/
-	
-	@RequestMapping(value = "/inscription", method = RequestMethod.GET)
-	public String inscription(Model model) {
-		model.addAttribute("client", new Client());
-		return "inscription";
-	}
-	
-	@RequestMapping(value = "/saveClient", method = RequestMethod.POST)
-	public String save(Model model, Client c) {
 
-		clientRepository.save(c);
-		return "confirmationInscription";
-	}
-	
-	@RequestMapping(value = "/connexion")
-	public String connexion(Model model) {
+    @RequestMapping(value = "/inscription", method = RequestMethod.GET)
+    public String inscription(Model model) {
+        model.addAttribute("client", new Client());
+        return "inscription";
+    }
 
-		return "connexion";
-	}
-	
-	@RequestMapping(value = "/home")
-	public String home(Model model) {
+    @RequestMapping(value = "/saveClient", method = RequestMethod.POST)
+    public String save(Model model, Client c) {
 
-		return "home";
-	}
-	
-	@RequestMapping(value = "/register")
-	public String register(Model model) {
+        clientRepository.save(c);
+        return "confirmationInscription";
+    }
 
-		return "register";
-	}
-	
-	@RequestMapping(value = "/InfoVisite")
-	public String InfoVisite(Model model) {
+    @RequestMapping(value = "/connexion")
+    public String connexion(Model model) {
 
-		return "infoVisite";
-	}
-	
-	@RequestMapping(value = "/Livraison")
-	public String Livraison(Model model) {
+        return "connexion";
+    }
 
-		return "livraison";
-	}
-	
-	@RequestMapping(value = "/Commander")
-	public String Commander(Model model) {
+    @RequestMapping(value = "/home")
+    public String home(Model model) {
 
-		return "commander";
-	}
+        return "home";
+    }
+
+    @RequestMapping(value = "/register")
+    public String register(Model model) {
+
+        return "register";
+    }
+
+    @RequestMapping(value = "/InfoVisite")
+    public String InfoVisite(Model model) {
+
+        return "infoVisite";
+    }
+
+    @RequestMapping(value = "/Livraison")
+    public String Livraison(Model model) {
+
+        return "livraison";
+    }
+
+    @RequestMapping(value = "/Commander")
+    public String Commander(Model model) {
+
+        return "commander";
+    }
 }
