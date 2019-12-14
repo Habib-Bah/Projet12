@@ -22,6 +22,8 @@ public class Product implements Serializable {
     private String photoName;
     @ManyToOne
     private Category category;
+    @Transient
+    private int quantity = 1;
 
     public Product (Long id, String name, String description, double currentPrice, boolean promotion, boolean selected, boolean available, String photoName, Category category) {
         this.id = id;
@@ -108,5 +110,13 @@ public class Product implements Serializable {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
